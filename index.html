@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Guddu Kumar | SEO Executive Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
 *{
 margin:0;
 padding:0;
@@ -7,204 +20,371 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e293b,#020617);
+background:#050b18;
 color:#fff;
 }
 
-/* Header */
+
+/* Navbar */
+
 header{
+position:sticky;
+top:0;
+z-index:100;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
-position:sticky;
-top:0;
-background:rgba(15,23,42,.9);
-backdrop-filter:blur(12px);
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,.08);
+padding:20px 8%;
+background:rgba(5,11,24,.8);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
 font-size:30px;
-font-weight:700;
-color:#38bdf8;
-letter-spacing:2px;
+font-weight:800;
+color:#00eaff;
 }
 
+
 nav a{
-color:#fff;
+color:white;
 text-decoration:none;
 margin-left:25px;
-transition:.3s;
-font-weight:500;
+font-size:15px;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#00eaff;
 }
 
+
 /* Hero */
+
 .hero{
+
 min-height:90vh;
 display:flex;
 justify-content:center;
 align-items:center;
-flex-wrap:wrap;
 gap:70px;
-padding:70px 8%;
+padding:60px 8%;
 }
+
 
 .avatar{
-width:240px;
-height:240px;
+
+height:250px;
+width:250px;
 border-radius:50%;
-background:linear-gradient(135deg,#38bdf8,#6366f1);
+
+background:
+linear-gradient(135deg,#00eaff,#0066ff);
+
 display:flex;
-justify-content:center;
 align-items:center;
-font-size:75px;
-font-weight:bold;
-color:#fff;
-box-shadow:0 0 40px rgba(56,189,248,.5);
-transition:.4s;
+justify-content:center;
+
+font-size:90px;
+font-weight:800;
+
+box-shadow:
+0 0 40px #00eaff;
+
+animation:float 3s infinite;
+
 }
 
-.avatar:hover{
-transform:scale(1.05) rotate(5deg);
+
+@keyframes float{
+
+50%{
+transform:translateY(-20px);
 }
 
-.hero-text h1{
+}
+
+
+
+.hero h1{
+
 font-size:55px;
-margin-bottom:10px;
+
 }
 
-.hero-text h2{
-font-size:28px;
-color:#38bdf8;
-margin-bottom:20px;
+
+.hero h2{
+
+color:#00eaff;
+margin:15px 0;
+
 }
 
-.hero-text p{
+
+.hero p{
+
 max-width:550px;
 line-height:30px;
-color:#d1d5db;
+color:#ccc;
+
 }
 
-/* Buttons */
+
 .btn{
+
 display:inline-block;
-margin-top:25px;
-padding:13px 30px;
-background:linear-gradient(135deg,#38bdf8,#6366f1);
-color:#fff;
+
+margin-top:30px;
+
+padding:14px 30px;
+
+background:#00eaff;
+
+color:#000;
+
+border-radius:50px;
+
 text-decoration:none;
-border-radius:40px;
-font-weight:600;
-margin-right:12px;
+
+font-weight:700;
+
+margin-right:15px;
+
 transition:.3s;
-box-shadow:0 10px 25px rgba(56,189,248,.3);
+
 }
+
 
 .btn:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 30px rgba(56,189,248,.5);
+
+transform:translateY(-5px);
+
+box-shadow:0 0 20px #00eaff;
+
 }
 
-/* Sections */
+
+
+/* Common */
+
 section{
+
 padding:80px 8%;
+
 }
+
 
 .title{
+
 text-align:center;
+
 font-size:38px;
-margin-bottom:45px;
-color:#38bdf8;
-position:relative;
+
+color:#00eaff;
+
+margin-bottom:40px;
+
 }
 
-.title::after{
-content:'';
-display:block;
-width:80px;
-height:4px;
-background:#6366f1;
-margin:12px auto;
-border-radius:20px;
-}
 
-/* Cards */
+
 .card{
-background:rgba(255,255,255,.06);
-backdrop-filter:blur(12px);
+
+background:
+rgba(255,255,255,.06);
+
+border:1px solid rgba(255,255,255,.1);
+
 padding:30px;
-border-radius:18px;
-border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
 margin-bottom:25px;
-transition:.4s;
-}
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(56,189,248,.25);
-}
-
-/* Skills */
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.skill{
-background:rgba(255,255,255,.06);
-padding:22px;
-border-radius:16px;
-text-align:center;
-font-weight:600;
-transition:.3s;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.skill:hover{
-background:linear-gradient(135deg,#38bdf8,#6366f1);
-transform:translateY(-6px);
-}
-
-/* Footer */
-footer{
-text-align:center;
-padding:25px;
-background:#0f172a;
-margin-top:40px;
-color:#94a3b8;
-border-top:1px solid rgba(255,255,255,.08);
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-.hero{
-text-align:center;
-}
-
-.hero-text h1{
-font-size:38px;
-}
-
-.hero-text h2{
-font-size:24px;
-}
-
-.avatar{
-width:190px;
-height:190px;
-font-size:60px;
-}
-
-nav{
-display:none;
-}
+backdrop-filter:blur(10px);
 
 }
+
+
+
+.card h3{
+
+color:#00eaff;
+
+margin-bottom:10px;
+
+}
+
+
+
+/* Experience */
+
+.timeline{
+
+border-left:3px solid #00eaff;
+
+padding-left:25px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+GK
+</div>
+
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div class="avatar">
+
+GK
+
+</div>
+
+
+<div>
+
+<h1>
+Guddu Kumar
+</h1>
+
+
+<h2>
+SEO Executive | Digital Marketing Specialist
+</h2>
+
+
+<p>
+
+I help businesses grow online through
+SEO strategies, keyword research,
+technical optimization and organic traffic growth.
+
+</p>
+
+
+<a class="btn" href="resume.pdf">
+Download Resume
+</a>
+
+
+<a class="btn"
+href="https://www.linkedin.com/in/kumar-guddu08/"
+target="_blank">
+
+LinkedIn
+
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+<section id="about">
+
+
+<h2 class="title">
+About Me
+</h2>
+
+
+<div class="card">
+
+I am an SEO Executive with 4+ years of experience
+in Search Engine Optimization, WordPress,
+Google Search Console, Google Analytics,
+Keyword Research and Link Building.
+
+I focus on improving website visibility,
+organic rankings and business growth through
+effective SEO strategies.
+
+</div>
+
+
+</section>
+
+
+
+<section id="experience">
+
+
+<h2 class="title">
+Experience
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="card">
+
+<h3>
+Research Nester Pvt. Ltd.
+</h3>
+
+<p>
+SEO Executive
+</p>
+
+<p>
+Worked on SEO audits, keyword research,
+content optimization, backlinks and ranking improvement.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+PNJ Sharp Tech
+</h3>
+
+<p>
+SEO Executive
+</p>
+
+<p>
+Managed On Page SEO, Off Page SEO,
+WordPress optimization and link building campaigns.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
