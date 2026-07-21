@@ -1,289 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
+<link rel="stylesheet" href="index.css">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Guddu Kumar | SEO Executive</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta name="description"
+content="Guddu Kumar - SEO Executive with 4+ years of experience in Technical SEO, On-Page SEO, Off-Page SEO, WordPress and Digital Marketing.">
 
-<style>
+<meta name="keywords"
+content="SEO Executive, Technical SEO, WordPress SEO, Digital Marketing, Guddu Kumar">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-body{
-background:#093624;
-color:darkgrey;
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#0b1d36;
-position:sticky;
-top:0;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#00d9ff;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
-
-.hero{
-min-height:90vh;
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-padding:60px;
-gap:60px;
-}
-
-.avatar{
-width:220px;
-height:220px;
-border-radius:50%;
-background:linear-gradient(135deg,#00d9ff,#0077ff);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:80px;
-font-weight:bold;
-box-shadow:0 0 30px cyan;
-}
-
-.hero-text h1{
-font-size:50px;
-}
-
-.hero-text h2{
-color:#00d9ff;
-margin:15px 0;
-}
-
-.hero-text p{
-max-width:500px;
-line-height:28px;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:12px 28px;
-background:#00d9ff;
-color:#000;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-margin-right:10px;
-}
-
-section{
-padding:80px 8%;
-}
-
-h2.title{
-font-size:35px;
-margin-bottom:30px;
-color:#00d9ff;
-text-align:center;
-}
-
-.card{
-background:#10233f;
-padding:25px;
-border-radius:15px;
-margin-bottom:20px;
-}
-
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.skill{
-background:#10233f;
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
-footer{
-text-align:center;
-padding:25px;
-background:#0b1d36;
-margin-top:50px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
+
+<div class="cursor"></div>
+
+<div id="particles"></div>
 
 <header>
 
-<div class="logo">GK</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="avatar">
+<div class="logo">
 GK
 </div>
 
-<div class="hero-text">
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#skills">Skills</a>
+
+<a href="#experience">Experience</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="theme-toggle">
+<i class="fas fa-moon"></i>
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-left">
+
+<h3>Hello 👋 I'm</h3>
 
 <h1>Guddu Kumar</h1>
 
-<h2>SEO Executive</h2>
+<h2>
+
+<span id="typing"></span>
+
+</h2>
 
 <p>
 
-Helping businesses grow with SEO, On-Page SEO,
-Off-Page SEO, Technical SEO, WordPress,
-Keyword Research and Digital Marketing.
+Helping businesses rank higher on Google through
+Technical SEO, On Page SEO,
+Off Page SEO,
+Keyword Research,
+WordPress Optimization,
+and Digital Marketing.
 
 </p>
 
-<a class="btn" href="resume.pdf">Download Resume</a>
+<div class="hero-buttons">
 
-<a class="btn"
-target="_blank"
-href="https://www.linkedin.com/in/kumar-guddu08/">
+<a href="#contact" class="btn">
 
-LinkedIn
+Hire Me
+
+</a>
+
+<a href="resume.pdf"
+class="btn btn-outline">
+
+Download Resume
 
 </a>
 
 </div>
 
+<div class="social">
+
+<a target="_blank"
+href="https://www.linkedin.com/in/kumar-guddu08/">
+
+<i class="fab fa-linkedin"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-github"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-twitter"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="profile-card">
+
+<div class="circle"></div>
+
+<img src="profile.png"
+alt="Guddu Kumar">
+
+</div>
+
+</div>
+
 </section>
+
+<!-- COUNTER -->
+
+<section class="counter">
+
+<div class="box">
+
+<h2 class="count" data-target="4">0</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+<div class="box">
+
+<h2 class="count"
+data-target="120">0</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="box">
+
+<h2 class="count"
+data-target="500">0</h2>
+
+<p>K Organic Visitors</p>
+
+</div>
+
+<div class="box">
+
+<h2 class="count"
+data-target="98">0</h2>
+
+<p>Client Satisfaction %</p>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
 
 <section id="about">
 
-<h2 class="title">About Me</h2>
+<h2 class="title">
 
-<div class="card">
+About Me
 
-I am an SEO Executive with 4+ years of experience in Search Engine Optimization,
-WordPress, Google Search Console, Google Analytics,
-Keyword Research and Link Building.
+</h2>
 
-I enjoy improving website rankings and increasing organic traffic through
-effective SEO strategies.
+<div class="glass">
+
+<p>
+
+I'm an SEO Executive with over 4 years of experience
+helping businesses improve search rankings,
+increase organic traffic,
+and optimize websites.
+
+I specialize in
+
+<strong>
+
+Technical SEO,
+
+On-Page SEO,
+
+Off-Page SEO,
+
+WordPress,
+
+Google Search Console,
+
+Google Analytics,
+
+Ahrefs,
+
+SEMrush,
+
+Keyword Research,
+
+Content Optimization
+
+</strong>
+
+and SEO Audits.
+
+</p>
 
 </div>
 
 </section>
 
-<section id="experience">
+<!-- SERVICES -->
 
-<h2 class="title">Experience</h2>
+<section>
 
-<div class="card">
+<h2 class="title">
 
-<h3>Research Nester Pvt. Ltd.</h3>
+Services
 
-<p>SEO Executive</p>
+</h2>
 
-<p>Worked on On-Page SEO, Off-Page SEO,
-Keyword Research, Technical SEO and Content Optimization.</p>
+<div class="services">
+
+<div class="service">
+
+<i class="fas fa-chart-line"></i>
+
+<h3>Technical SEO</h3>
+
+<p>
+
+Website Audit,
+Core Web Vitals,
+Indexing,
+Schema,
+Speed Optimization
+
+</p>
 
 </div>
 
-<div class="card">
+<div class="service">
 
-<h3>PNJ Sharp Tech</h3>
+<i class="fas fa-search"></i>
 
-<p>SEO Executive</p>
+<h3>Keyword Research</h3>
 
-<p>Worked on Website Optimization,
-Backlinks,
-Guest Posting and WordPress SEO.</p>
+<p>
+
+Competitor Analysis,
+Keyword Mapping,
+Search Intent
+
+</p>
+
+</div>
+
+<div class="service">
+
+<i class="fas fa-link"></i>
+
+<h3>Link Building</h3>
+
+<p>
+
+Guest Posting,
+High Authority Backlinks,
+Outreach
+
+</p>
+
+</div>
+
+<div class="service">
+
+<i class="fab fa-wordpress"></i>
+
+<h3>WordPress SEO</h3>
+
+<p>
+
+Yoast SEO,
+RankMath,
+Optimization,
+Migration
+
+</p>
+
+</div>
 
 </div>
 
 </section>
+
+<!-- SKILLS -->
 
 <section id="skills">
 
-<h2 class="title">Skills</h2>
+<h2 class="title">
+
+Skills
+
+</h2>
 
 <div class="skills">
 
-<div class="skill">SEO</div>
+<div class="skill">
 
-<div class="skill">Technical SEO</div>
+<span>SEO</span>
 
-<div class="skill">On Page SEO</div>
+<div class="progress">
 
-<div class="skill">Off Page SEO</div>
+<div style="width:95%"></div>
 
-<div class="skill">WordPress</div>
+</div>
 
-<div class="skill">Google Analytics</div>
+</div>
 
-<div class="skill">Google Search Console</div>
+<div class="skill">
 
-<div class="skill">Ahrefs</div>
+<span>Technical SEO</span>
 
-<div class="skill">SEMrush</div>
+<div class="progress">
 
-<div class="skill">Keyword Research</div>
+<div style="width:92%"></div>
 
-<div class="skill">Link Building</div>
+</div>
 
-<div class="skill">MS Office</div>
+</div>
+
+<div class="skill">
+
+<span>On Page SEO</span>
+
+<div class="progress">
+
+<div style="width:95%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>Off Page SEO</span>
+
+<div class="progress">
+
+<div style="width:90%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>WordPress</span>
+
+<div class="progress">
+
+<div style="width:90%"></div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<span>Google Analytics</span>
+
+<div class="progress">
+
+<div style="width:88%"></div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="title">
+
+Experience
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>
+
+Research Nester Pvt Ltd
+
+</h3>
+
+<span>
+
+SEO Executive
+
+</span>
+
+<p>
+
+Technical SEO,
+Content Optimization,
+Keyword Research,
+Google Analytics,
+Search Console
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+
+PNJ Sharp Tech
+
+</h3>
+
+<span>
+
+SEO Executive
+
+</span>
+
+<p>
+
+WordPress,
+Backlinks,
+Guest Posting,
+Website Optimization
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="title">
+
+SEO Case Studies
+
+</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>
+
+320% Organic Traffic Growth
+
+</h3>
+
+<p>
+
+Improved technical SEO,
+optimized content,
+and increased rankings.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>
+
+150+ Keywords Ranked
+
+</h3>
+
+<p>
+
+Achieved first-page rankings for competitive keywords.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>
+
+Core Web Vitals
+
+</h3>
+
+<p>
+
+Improved loading speed,
+CLS,
+LCP,
+and Page Experience.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
 <section id="contact">
 
-<h2 class="title">Contact</h2>
+<h2 class="title">
 
-<div class="card">
+Contact
 
-<p><b>Email:</b> kmrguddu08@gmail.com</p>
+</h2>
 
-<p><b>Phone:</b> 8920229666</p>
+<div class="contact-box">
 
-<p><b>Location:</b> Noida</p>
+<div>
+
+<h3>
+
+Let's Work Together
+
+</h3>
+
+<p>
+
+Email
 
 <br>
 
-<a class="btn"
-target="_blank"
-href="https://www.linkedin.com/in/kumar-guddu08/">
+<strong>
 
-Connect on LinkedIn
+kmrguddu08@gmail.com
 
-</a>
+</strong>
+
+</p>
+
+<p>
+
+Phone
+
+<br>
+
+<strong>
+
+8920229666
+
+</strong>
+
+</p>
+
+<p>
+
+Location
+
+<br>
+
+<strong>
+
+Noida
+
+</strong>
+
+</p>
+
+</div>
+
+<form>
+
+<input
+type="text"
+placeholder="Your Name">
+
+<input
+type="email"
+placeholder="Your Email">
+
+<textarea
+placeholder="Message"></textarea>
+
+<button
+class="btn">
+
+Send Message
+
+</button>
+
+</form>
 
 </div>
 
@@ -291,9 +642,20 @@ Connect on LinkedIn
 
 <footer>
 
-© 2025 Guddu Kumar | SEO Executive
+© 2026
+
+Guddu Kumar
+
+All Rights Reserved
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script src="script.js"></script>
+
+<script src="Index.js"></script>
 </body>
 </html>
