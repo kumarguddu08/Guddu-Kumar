@@ -542,13 +542,13 @@ section{
   height: 62px;
   margin: 0 auto 20px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #fbbf24, #f43f5e);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   color: white;
-  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.35);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
 }
 
 .contact-card h3 {
