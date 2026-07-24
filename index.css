@@ -8,12 +8,12 @@
 
 :root{
 
-    --bg:#120b0d;
-    --card:rgba(255,255,255,0.06);
-    --primary:#fbbf24;
-    --secondary:#f43f5e;
+    --bg:#0a0a0f;
+    --card:rgba(255,255,255,0.05);
+    --primary:#c6ff3d;
+    --secondary:#9333ea;
     --text:#f8fafc;
-    --muted:#cbd5e1;
+    --muted:#a1a1aa;
 
 }
 
