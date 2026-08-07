@@ -575,6 +575,9 @@ section{
 
 .orbit-ring {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -27px 0 0 -27px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -589,10 +592,10 @@ section{
   box-shadow: 0 8px 20px rgba(56,189,248,0.25);
 }
 
-.ring1 { top: 0; left: 50%; margin-left: -27px; animation: spin1 8s linear infinite; }
-.ring2 { top: 50%; right: 0; margin-top: -27px; animation: spin2 8s linear infinite; }
-.ring3 { bottom: 0; left: 50%; margin-left: -27px; animation: spin3 8s linear infinite; }
-.ring4 { top: 50%; left: 0; margin-top: -27px; animation: spin4 8s linear infinite; }
+.ring1 { animation: spin1 8s linear infinite; }
+.ring2 { animation: spin2 8s linear infinite; }
+.ring3 { animation: spin3 8s linear infinite; }
+.ring4 { animation: spin4 8s linear infinite; }
 
 @keyframes spin1 {
   0% { transform: rotate(0deg) translateY(-160px) rotate(0deg); }
@@ -616,17 +619,19 @@ section{
   background: var(--card);
   backdrop-filter: blur(10px);
   border: 1px solid #ffffff20;
-  border-radius: 30px;
-  padding: 8px 16px;
-  font-size: 13px;
-  font-weight: 600;
+  border-radius: 35px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--text);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
   animation: chipFloat 3s ease-in-out infinite;
 }
 
 .float-chip i {
   color: #4ade80;
-  margin-right: 5px;
+  margin-right: 6px;
+  font-size: 15px;
 }
 
 .chip1 { top: 10px; left: -10px; animation-delay: 0s; }
