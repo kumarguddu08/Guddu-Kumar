@@ -499,8 +499,127 @@ section{
 }
 
 
+/* HERO STATS CARD */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats-card {
+  width: 380px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #ffffff20;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 60px rgba(56,189,248,0.25);
+  overflow: hidden;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.stats-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid #ffffff15;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dot.red { background: #f87171; }
+.dot.yellow { background: #fbbf24; }
+.dot.green { background: #4ade80; }
+
+.stats-title {
+  margin-left: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.stats-body {
+  padding: 25px;
+}
+
+.stats-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.stats-value.up {
+  color: #4ade80;
+  font-weight: 700;
+}
+
+.graph-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 100px;
+  margin-bottom: 25px;
+}
+
+.graph-bars .bar {
+  flex: 1;
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 6px 6px 0 0;
+  animation: grow 1.2s ease forwards;
+}
+
+@keyframes grow {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
+.graph-bars .bar { transform-origin: bottom; }
+
+.stats-mini {
+  display: flex;
+  gap: 15px;
+}
+
+.mini-box {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid #ffffff15;
+  border-radius: 12px;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.mini-box h4 {
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.mini-box p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+@media(max-width:900px){
+  .stats-card { width: 100%; max-width: 340px; }
+}
+
 
 /* CONTACT */
+
+.contact-wrapper {
+  ...
 
 .contact-wrapper {
   max-width: 1000px;
