@@ -648,9 +648,6 @@ section{
 /* CONTACT */
 
 .contact-wrapper {
-  ...
-
-.contact-wrapper {
   max-width: 1000px;
   margin: 0 auto;
   text-align: center;
