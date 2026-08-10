@@ -353,61 +353,94 @@ section{
 
 
 
-/* COUNTERS */
-
-.counter{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
 .box{
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    text-align: left;
+    position: relative;
     background: rgba(255,255,255,0.03);
     border: 1px solid #ffffff15;
-    border-radius: 14px;
-    padding: 24px 22px;
+    border-radius: 16px;
+    padding: 28px 26px;
     transition: .3s;
+    overflow: hidden;
 }
 
 .box:hover{
     border-color: #ffffff30;
     background: rgba(255,255,255,0.05);
+    transform: translateY(-6px);
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
 }
 
 .box-icon{
-    flex-shrink: 0;
-    width: 46px;
-    height: 46px;
-    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     background: rgba(56,189,248,0.1);
     border: 1px solid rgba(56,189,248,0.25);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 20px;
     color: var(--primary);
 }
 
-.box-content{
-    display: flex;
-    flex-direction: column;
+.box-trend{
+    font-size: 11px;
+    font-weight: 600;
+    color: #4ade80;
+    background: rgba(74,222,128,0.1);
+    border: 1px solid rgba(74,222,128,0.25);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.box-trend i{
+    margin-right: 3px;
 }
 
 .box h2{
-    font-size:32px;
-    font-weight: 700;
+    font-size:38px;
+    font-weight: 800;
     color: var(--text);
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-.box p{
+.box-label{
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.box-desc{
     color: var(--muted);
-    font-size: 13px;
-    margin-top: 2px;
+    font-size: 12.5px;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.box-bar{
+    margin-top: 16px;
+    height: 5px;
+    background: #ffffff12;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box-bar div{
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    animation: fillBar 1.5s ease forwards;
+}
+
+@keyframes fillBar{
+  from{ width: 0 !important; }
 }
 
 @media(max-width:900px){
