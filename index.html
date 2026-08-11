@@ -626,65 +626,22 @@ and Page Experience.
 
 <section id="contact">
 
-<h2 class="title">
-
-Contact
-
-</h2>
+<h2 class="title">Contact</h2>
 
 <div class="contact-wrapper">
 
 <p class="contact-subtitle">
-
 Let's work together and grow your business with powerful SEO strategies.
-
 </p>
 
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="contact-icon">
-
-<i class="fas fa-envelope"></i>
-
-</div>
-
-<h3>Email</h3>
-
-<p>kmrguddu08@gmail.com</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="contact-icon">
-
-<i class="fas fa-phone"></i>
-
-</div>
-
-<h3>Phone</h3>
-
-<p>+91 8920229666</p>
-
-</div>
-
-<div class="contact-card">
-
-<div class="contact-icon">
-
-<i class="fas fa-location-dot"></i>
-
-</div>
-
-<h3>Location</h3>
-
-<p>Noida, India</p>
-
-</div>
-
-</div>
+<form class="contact-form" id="whatsappForm">
+  <input type="text" id="cf-name" placeholder="Your Name" required>
+  <input type="email" id="cf-email" placeholder="Your Email" required>
+  <textarea id="cf-message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn">
+    <i class="fab fa-whatsapp"></i> Send via WhatsApp
+  </button>
+</form>
 
 </div>
 
@@ -707,5 +664,19 @@ All Rights Reserved
 <script src="script.js"></script>
 
 <script src="Index.js"></script>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  const message = document.getElementById('cf-message').value;
+
+  const text = `Hi Guddu, I'm ${name} (${email}).%0A%0A${message}`;
+  const whatsappURL = `https://wa.me/918920229666?text=${text}`;
+
+  window.open(whatsappURL, '_blank');
+});
+</script>
 </body>
 </html>
