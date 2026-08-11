@@ -606,6 +606,13 @@ section{
   font-size: 22px;
 }
 
+.tool-img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .about-tools-list span:hover{
   border-color: var(--primary);
 }
