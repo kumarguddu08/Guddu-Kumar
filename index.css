@@ -603,7 +603,7 @@ section{
 
 .tool-icon{
   color: var(--primary);
-  font-size: 14px;
+  font-size: 22px;
 }
 
 .about-tools-list span:hover{
