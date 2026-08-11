@@ -981,6 +981,7 @@ section{
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .contact-card {
