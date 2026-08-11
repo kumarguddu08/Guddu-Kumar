@@ -588,6 +588,9 @@ section{
 }
 
 .about-tools-list span{
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: rgba(255,255,255,0.04);
   border: 1px solid #ffffff20;
   padding: 8px 16px;
@@ -596,6 +599,11 @@ section{
   font-weight: 500;
   color: var(--text);
   transition: .3s;
+}
+
+.tool-icon{
+  color: var(--primary);
+  font-size: 14px;
 }
 
 .about-tools-list span:hover{
