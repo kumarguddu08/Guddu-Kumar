@@ -616,9 +616,10 @@ section{
 }
 
 .tool-logo-circle img{
-  max-width: 65%;
-  max-height: 65%;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
+  display: block;
 }
 
 .about-tools-list span:hover{
