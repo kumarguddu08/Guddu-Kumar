@@ -616,11 +616,11 @@ section{
 }
 
 .tool-logo-circle img{
-  width: 26px;
-  height: 26px;
-  object-fit: contain;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  margin: auto;
   background: transparent;
 }
 
