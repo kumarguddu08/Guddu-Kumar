@@ -584,32 +584,40 @@ section{
 .about-tools-list{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
 }
 
 .about-tools-list span{
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid #ffffff20;
-  padding: 8px 16px;
-  border-radius: 12px;
+  gap: 10px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #ffffff15;
+  padding: 8px 18px 8px 8px;
+  border-radius: 30px;
   font-size: 13px;
   font-weight: 500;
   color: var(--text);
   transition: .3s;
 }
 
-.tool-icon{
-  color: var(--primary);
-  font-size: 22px;
+.tool-logo-circle{
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 1px solid #ffffff20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.tool-img{
-  height: 22px;
-  width: auto;
-  max-width: 50px;
+.tool-logo-circle img{
+  max-width: 65%;
+  max-height: 65%;
   object-fit: contain;
 }
 
