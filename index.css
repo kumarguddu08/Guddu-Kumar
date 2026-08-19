@@ -604,8 +604,8 @@ section{
 
 .tool-logo-circle{
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #ffffff !important;
   border: 1px solid #ffffff20;
@@ -616,19 +616,13 @@ section{
 }
 
 .tool-logo-circle img{
-  width: 32px;
-  height: 32px;
-  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
   object-position: center;
   display: block;
+  margin: auto;
   background: transparent;
-}
-
-.tool-logo-circle img{
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  display: block;
 }
 
 .about-tools-list span:hover{
