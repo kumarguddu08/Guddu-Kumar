@@ -722,6 +722,29 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e){
 
   window.open(whatsappURL, '_blank');
 });
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cf-name').value;
+  const email = document.getElementById('cf-email').value;
+  const message = document.getElementById('cf-message').value;
+
+  const text = `Hi Guddu, I'm ${name} (${email}).%0A%0A${message}`;
+  const whatsappURL = `https://wa.me/918920229666?text=${text}`;
+
+  window.open(whatsappURL, '_blank');
+});
 </script>
+
+<!-- ⬇️ YAHAN CHATBOT WIDGET CODE PASTE KARNA HAI ⬇️ -->
+<div id="chatbot-toggle" onclick="toggleChatbot()">💬</div>
+<div id="chatbot-window">
+  ...
+</div>
+<style>
+  ...
+</style>
+<!-- ⬆️ YAHAN TAK ⬆️ -->
+
 </body>
 </html>

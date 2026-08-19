@@ -366,3 +366,75 @@ form.addEventListener("submit",(e)=>{
 
 
 });
+
+// ===============================
+// AI Chatbot Logic
+// ===============================
+
+const CHATBOT_API_URL = "https://guddu-chatbot-api.vercel.app/api/chat";
+
+function toggleChatbot() {
+  const chatWindow = document.getElementById('chatbot-window');
+  if (chatWindow.style.display === 'flex') {
+    chatWindow.style.display = 'none';
+  } else {
+    chatWindow.style.display = 'flex';
+  }
+}
+
+async function sendChatMessage() {
+  const input = document.getElementById('chatbot-input');
+  const message = input.value.trim();
+
+  if (!message) return;
+
+  const messagesDiv = document.getElementById('chatbot-messages');
+
+  const userMsgDiv = document.createElement('div');
+  userMsgDiv.className = 'user-message';
+  userMsgDiv.textContent = message;
+  messagesDiv.appendChild(userMsgDiv);
+
+  input.value = '';
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'bot-message';
+  typingDiv.id = 'typing-indicator';
+  typingDiv.textContent = 'Type kar raha hoon...';
+  messagesDiv.appendChild(typingDiv);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  try {
+    const response = await fetch(CHATBOT_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ message: message }),
+    });
+
+    const data = await response.json();
+
+    document.getElementById('typing-indicator').remove();
+
+    const botMsgDiv = document.createElement('div');
+    botMsgDiv.className = 'bot-message';
+
+    if (data.reply) {
+      botMsgDiv.textContent = data.reply;
+    } else {
+      botMsgDiv.textContent = 'Sorry, kuch problem ho gayi. Thodi der baad try karein.';
+    }
+
+    messagesDiv.appendChild(botMsgDiv);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  } catch (error) {
+    document.getElementById('typing-indicator').remove();
+    const errorMsgDiv = document.createElement('div');
+    errorMsgDiv.className = 'bot-message';
+    errorMsgDiv.textContent = 'Connection me problem hai. Thodi der baad try karein.';
+    messagesDiv.appendChild(errorMsgDiv);
+  }
+}
