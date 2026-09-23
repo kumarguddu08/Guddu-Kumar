@@ -948,5 +948,108 @@ function getBotReply(text) {
 }
 </script>
 
+<!-- WELCOME POPUP -->
+<div id="welcome-popup-overlay">
+  <div id="welcome-popup-box">
+    <span id="welcome-popup-close" onclick="closeWelcomePopup()">✕</span>
+    <div class="welcome-popup-icon">👋</div>
+    <h3>Namaste! Main Guddu Kumar hoon</h3>
+    <p>SEO Executive jo businesses ko Google par higher rank karwane me madad karta hai. Portfolio explore kijiye ya directly connect kijiye!</p>
+    <div class="welcome-popup-buttons">
+      <a href="#contact" class="btn" onclick="closeWelcomePopup()">Contact Karein</a>
+      <a href="images/Guddu_Kumar_SEO_Executive_Resume.pdf" download class="btn btn-outline" onclick="closeWelcomePopup()">Resume Dekhein</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  #welcome-popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #welcome-popup-box {
+    position: relative;
+    background: #0f172a;
+    border: 1px solid #ffffff20;
+    border-radius: 18px;
+    padding: 35px 30px;
+    max-width: 380px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: popupIn 0.4s ease;
+  }
+
+  @keyframes popupIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  #welcome-popup-close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    cursor: pointer;
+    color: #cbd5e1;
+    font-size: 16px;
+  }
+
+  .welcome-popup-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  #welcome-popup-box h3 {
+    color: #f8fafc;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  #welcome-popup-box p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  .welcome-popup-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .welcome-popup-buttons .btn {
+    margin-top: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+</style>
+
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      if (!sessionStorage.getItem('welcomePopupShown')) {
+        document.getElementById('welcome-popup-overlay').style.display = 'flex';
+        sessionStorage.setItem('welcomePopupShown', 'true');
+      }
+    }, 2000);
+  });
+
+  function closeWelcomePopup() {
+    document.getElementById('welcome-popup-overlay').style.display = 'none';
+  }
+
+  document.getElementById('welcome-popup-overlay').addEventListener('click', function(e){
+    if (e.target === this) closeWelcomePopup();
+  });
+</script>
+
 </body>
 </html>
