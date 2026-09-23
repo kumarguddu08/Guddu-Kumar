@@ -417,6 +417,38 @@ Migration
 
 </div>
 
+<div class="service">
+
+<i class="fas fa-file-lines"></i>
+
+<h3>Content Optimization</h3>
+
+<p>
+
+Search Intent Mapping,
+Content Structuring,
+On-Page Relevance
+
+</p>
+
+</div>
+
+<div class="service">
+
+<i class="fas fa-chart-simple"></i>
+
+<h3>Analytics & Reporting</h3>
+
+<p>
+
+Google Analytics (GA4),
+Search Console,
+Performance Tracking
+
+</p>
+
+</div>
+
 </div>
 
 </section>
@@ -725,20 +757,6 @@ Let's work together and grow your business with powerful SEO strategies.
 
 <script src="Index.js"></script>
 
-<script>
-document.getElementById('whatsappForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  const name = document.getElementById('cf-name').value;
-  const email = document.getElementById('cf-email').value;
-  const message = document.getElementById('cf-message').value;
-
-  const text = `Hi Guddu, I'm ${name} (${email}).%0A%0A${message}`;
-  const whatsappURL = `https://wa.me/918920229666?text=${text}`;
-
-  window.open(whatsappURL, '_blank');
-});
-</script>
-
 <div id="chatbot-toggle" onclick="toggleChatbot()">
   💬
 </div>
@@ -876,6 +894,59 @@ document.getElementById('whatsappForm').addEventListener('submit', function(e){
     }
   }
 </style>
+
+<script>
+function toggleChatbot() {
+  const chatWindow = document.getElementById('chatbot-window');
+  if (chatWindow.style.display === 'flex') {
+    chatWindow.style.display = 'none';
+  } else {
+    chatWindow.style.display = 'flex';
+  }
+}
+
+function sendChatMessage() {
+  const input = document.getElementById('chatbot-input');
+  const messagesBox = document.getElementById('chatbot-messages');
+  const userText = input.value.trim();
+  if (userText === '') return;
+
+  const userMsg = document.createElement('div');
+  userMsg.className = 'user-message';
+  userMsg.textContent = userText;
+  messagesBox.appendChild(userMsg);
+
+  input.value = '';
+  messagesBox.scrollTop = messagesBox.scrollHeight;
+
+  setTimeout(() => {
+    const botMsg = document.createElement('div');
+    botMsg.className = 'bot-message';
+    botMsg.textContent = getBotReply(userText.toLowerCase());
+    messagesBox.appendChild(botMsg);
+    messagesBox.scrollTop = messagesBox.scrollHeight;
+  }, 500);
+}
+
+function getBotReply(text) {
+  if (text.includes('skill') || text.includes('expertise')) {
+    return "Guddu ki core skills hain: Technical SEO, On-Page & Off-Page SEO, WordPress Optimization, Keyword Research, aur Google Analytics/Search Console.";
+  }
+  if (text.includes('experience') || text.includes('year')) {
+    return "Guddu ke paas 4+ years ka SEO experience hai, 120+ projects par kaam kiya hai.";
+  }
+  if (text.includes('contact') || text.includes('hire') || text.includes('email') || text.includes('phone')) {
+    return "Aap Contact section me jaakar Guddu se directly connect kar sakte hain — Email, Phone, ya Location wahan mil jayegi.";
+  }
+  if (text.includes('service')) {
+    return "Guddu ki services me shamil hai: Technical SEO, Keyword Research, Link Building, WordPress SEO, Content Optimization, aur Analytics & Reporting.";
+  }
+  if (text.includes('resume') || text.includes('cv')) {
+    return "Aap Home section me 'Download Resume' button se Guddu ka resume download kar sakte hain.";
+  }
+  return "Ye ek basic assistant hai. Aap Guddu ke skills, experience, services, ya contact ke baare me pooch sakte hain!";
+}
+</script>
 
 </body>
 </html>
